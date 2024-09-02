@@ -96,6 +96,7 @@ header .star-bottom:hover {
     font-size: 20px;
     font-weight: 500;
     line-height: 21px;
+    min-width: 300px;
 }
 
 .selection-title {
