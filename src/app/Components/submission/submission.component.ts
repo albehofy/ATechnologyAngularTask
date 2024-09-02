@@ -18,12 +18,12 @@ export class SubmissionComponent {
         this.progress++;
       } else {
         clearInterval(a);
-        setTimeout(()=>{
+        setTimeout(() => {
           this.handleImage();
           // this.houseData.emit({
           //   progress: '100%',
           // })
-        },2000)
+        }, 2000)
       }
     }, 50)
 
@@ -39,13 +39,13 @@ export class SubmissionComponent {
 
   handleImage() {
     if (this.imageElement) {
-      this.imageElement.nativeElement.childNodes[0].src='/assets/images/complete.png'; 
+      this.imageElement.nativeElement.childNodes[0].src = '/assets/images/complete.png';
       this.imageElement.nativeElement.classList.add('complete')
       console.log(this.imageElement)
-      
+
     } else {
       console.warn('Image element is not yet available.');
     }
   }
-  
+
 }

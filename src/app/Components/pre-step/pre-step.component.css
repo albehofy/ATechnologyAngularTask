@@ -207,16 +207,19 @@ li img {
     opacity: 0;
 }
 
-.btn-start{
+.btn-start {
     margin-right: auto;
     margin-left: 0;
 }
+
 @media only screen and (max-width:768px) {
-    .data-wrapper,.data-wrapper::after {
+
+    .data-wrapper,
+    .data-wrapper::after {
         height: 530px;
         min-height: auto;
     }
-    
+
     .data-wrapper,
     .data-wrapper::after,
     .selection {

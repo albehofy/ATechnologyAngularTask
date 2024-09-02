@@ -28,7 +28,8 @@ body {
     margin: auto;
 }
 
-.controller .icon, .back{
+.controller .icon,
+.back {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -44,10 +45,12 @@ body {
     border-radius: 7.11px;
     background-color: #F4F4F4;
 }
+
 .controller span:hover path {
     fill: #FF4B55;
     cursor: pointer;
 }
+
 /* Custom Radio Button */
 /* custom-radio-containers */
 

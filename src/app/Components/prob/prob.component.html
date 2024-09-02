@@ -1,4 +1,3 @@
-
 <div class="prob-container">
     <div class="wrapper">
 
@@ -8,25 +7,27 @@
         <div class="controller">
             <!-- close -->
             <span class="back" (click)="backToPrev()">
-                <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="close">
+                <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="close">
                     <path
                         d="M11.6451 5.09037L7.56179 9.1737C7.47662 9.25887 7.3646 9.30202 7.2526 9.30202C7.1406 9.30202 7.02859 9.25945 6.94342 9.1737C6.7725 9.00278 6.7725 8.72568 6.94342 8.55476L10.2801 5.21811H0.835938C0.594437 5.21811 0.398438 5.02211 0.398438 4.78061C0.398438 4.53911 0.594437 4.34311 0.835938 4.34311H10.2795L6.94285 1.00643C6.77193 0.835511 6.77193 0.558443 6.94285 0.387526C7.11377 0.216609 7.39087 0.216609 7.56179 0.387526L11.6451 4.47086C11.816 4.64294 11.816 4.91945 11.6451 5.09037Z"
                         fill="#2E2E2E" />
                 </svg>
                 العودة
             </span>
-        
+
             <!-- arrow -->
             <span class="icon" (click)="close()">
-                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="arrow">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="arrow">
                     <path
                         d="M3.70524 4.77939L0.855999 1.93114C0.496746 1.57201 0.496746 0.977594 0.855999 0.618467C1.21525 0.259339 1.80988 0.259339 2.16913 0.618467L5.01838 3.46672L7.86762 0.618467C8.22688 0.259339 8.8215 0.259339 9.18076 0.618467C9.54001 0.977594 9.54001 1.57201 9.18076 1.93114L6.33151 4.77939L9.18076 7.62764C9.54001 7.98677 9.54001 8.58119 9.18076 8.94032C8.99494 9.12607 8.75956 9.21276 8.52419 9.21276C8.28882 9.21276 8.05345 9.12607 7.86762 8.94032L5.01838 6.09206L2.16913 8.94032C1.98331 9.12607 1.74794 9.21276 1.51256 9.21276C1.27719 9.21276 1.04182 9.12607 0.855999 8.94032C0.496746 8.58119 0.496746 7.98677 0.855999 7.62764L3.70524 4.77939Z"
                         fill="#84929E" />
                 </svg>
             </span>
-        
-        
-        
+
+
+
         </div>
 
         <!-- Header -->
@@ -34,7 +35,7 @@
             <img src="/assets/images/star.svg" class="star-top" alt="star">
             <h2>{{headerAddress}}</h2>
             <p>قم بأختيار مصدر شقك الأسكانية كل تستكمل باقي الخطوات</p>
-            <img src="/assets/images/star.svg"  class="star-bottom" alt="star">
+            <img src="/assets/images/star.svg" class="star-bottom" alt="star">
         </header>
 
         <!-- Main -->
@@ -44,7 +45,8 @@
                 <div class="data-container">
                     <label for="cairo" [ngClass]="{'checked-label':location=='cairo'}">
                         <p class="custom-radio-containers">
-                            <input type="radio" name="houseLocation" id="cairo" value="cairo" [(ngModel)]="location" [(ngModel)]="houseType">
+                            <input type="radio" name="houseLocation" id="cairo" value="cairo" [(ngModel)]="location"
+                                [(ngModel)]="houseType">
                             <span class="checkmark"></span>
                         </p>
                         <img src="/assets/images/home.svg" alt="home">
@@ -69,7 +71,7 @@
                         <p class="card-name">دهب</p>
                     </label>
                 </div>
-                
+
                 }@else {
                 <div class="data-container">
                     <label for="vila" [ngClass]="{'checked-label':houseType=='vila'}">
@@ -82,7 +84,8 @@
                     </label>
                     <label for="doublex" [ngClass]="{'checked-label':houseType=='doublex'}">
                         <p class="custom-radio-containers">
-                            <input type="radio" name="houseLocation" value="doublex" id="doublex" [(ngModel)]="houseType">
+                            <input type="radio" name="houseLocation" value="doublex" id="doublex"
+                                [(ngModel)]="houseType">
                             <span class="checkmark"></span>
                         </p>
                         <img src="/assets/images/doublex.svg" alt="home">
@@ -104,13 +107,14 @@
         <!-- Footer -->
         <footer class="footer">
             @if(locationFirstStep){
-                <button (click)="goToNextStep()" class="btn-start" [disabled]="location != ''? false :true"><img
+            <button (click)="goToNextStep()" class="btn-start" [disabled]="location != ''? false :true"><img
                     src="/assets/images/btn-start-icon.svg" alt=""> ابدا الان</button>
             }@else {
-                <button class="btn-start" [disabled]="houseType != ''? false :true" (click)="goToNextLevel()">التالي</button>
+            <button class="btn-start" [disabled]="houseType != ''? false :true"
+                (click)="goToNextLevel()">التالي</button>
             }
             <p class="footer-title">
-                نحن هنا لمساعدتك في أختيار منزلك بسهولة وعناية 
+                نحن هنا لمساعدتك في أختيار منزلك بسهولة وعناية
                 <br>
                 قم بالضغط على زر "بدء" للبدء في العملية، واتبع التوجيهات لإدخال معلومات الحملة
             </p>

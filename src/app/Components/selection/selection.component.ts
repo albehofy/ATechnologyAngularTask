@@ -12,7 +12,7 @@ export class SelectionComponent {
 
   shortDesc!: string;
   longDesc!: string;
-  design:string='';
+  design: string = '';
 
   @Output() howToChoiseHouse: EventEmitter<{}> = new EventEmitter();
 
@@ -21,7 +21,7 @@ export class SelectionComponent {
       this.selectionFirstStep = JSON.parse(sessionStorage.getItem('level3-next-step') || '');
       this.shortDesc = JSON.parse(sessionStorage.getItem('shortDesc') || '');
       this.longDesc = JSON.parse(sessionStorage.getItem('longDesc') || '');
-      
+
     } else {
       this.selectionFirstStep = true;
       this.shortDesc = 'فيلا قريبة من التجمع الخامس';
@@ -49,37 +49,37 @@ export class SelectionComponent {
       process: 'level4',
       shortDesc: this.shortDesc,
       longDesc: this.longDesc,
-      design: this.design, 
-      progress:'100%',
+      design: this.design,
+      progress: '100%',
     });
   }
 
   goToNextStep(): void {
     this.howToChoiseHouse.emit({
-      progress:'85%',
+      progress: '85%',
     });
     this.selectionFirstStep = false;
-    sessionStorage.setItem('shortDesc',JSON.stringify(this.shortDesc));
-    sessionStorage.setItem('longDesc',JSON.stringify(this.longDesc));
-    sessionStorage.setItem('level3-next-step',JSON.stringify(this.selectionFirstStep))
+    sessionStorage.setItem('shortDesc', JSON.stringify(this.shortDesc));
+    sessionStorage.setItem('longDesc', JSON.stringify(this.longDesc));
+    sessionStorage.setItem('level3-next-step', JSON.stringify(this.selectionFirstStep))
   }
-  
-  backToPrev(){
-    if(!this.selectionFirstStep){
+
+  backToPrev() {
+    if (!this.selectionFirstStep) {
       this.selectionFirstStep = true;
-      sessionStorage.setItem('level2-next-step',JSON.stringify(this.selectionFirstStep))
-    }else {
+      sessionStorage.setItem('level2-next-step', JSON.stringify(this.selectionFirstStep))
+    } else {
       this.howToChoiseHouse.emit({
-        process:'level2',
-      }); 
+        process: 'level2',
+      });
     }
   }
-  
-  close():void{
+
+  close(): void {
     sessionStorage.clear();
     this.howToChoiseHouse.emit({
-      process:'start',
+      process: 'start',
 
-    }); 
+    });
   }
 }

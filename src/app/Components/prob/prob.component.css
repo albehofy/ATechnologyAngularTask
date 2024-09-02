@@ -3,7 +3,8 @@
     height: 100vh;
 }
 
-.wrapper,.data {
+.wrapper,
+.data {
     position: absolute;
     width: 100%;
 }
@@ -20,6 +21,7 @@
     /* opacity: 0.6; */
     min-height: 100%;
 }
+
 .wrapper::after {
     content: "";
     position: absolute;
@@ -30,6 +32,7 @@
     opacity: 0.8;
     min-height: 100%;
 }
+
 .data {
     top: 0;
     left: 0;
@@ -47,7 +50,7 @@
 header {
     position: relative;
     width: 351.61px;
-    height: 84.1px;    
+    height: 84.1px;
     padding: 21px 0;
     margin: auto;
     min-width: 300px;
@@ -83,11 +86,13 @@ header .star-bottom {
     left: 0;
 }
 
-.header .star-top, header .star-bottom {
+.header .star-top,
+header .star-bottom {
     position: absolute;
 }
 
-header .star-top:hover, header .star-bottom:hover {
+header .star-top:hover,
+header .star-bottom:hover {
     transform: scale(1.3);
 }
 
@@ -132,6 +137,7 @@ label:hover {
 .checked-label {
     border: 1px solid blue;
 }
+
 .card-name {
     padding-top: 19px;
     padding-bottom: 16.5px;
@@ -165,6 +171,7 @@ button {
 .footer {
     padding-bottom: 14px;
 }
+
 .footer-title {
     margin-top: 32px;
     font-size: 12px;
@@ -179,21 +186,22 @@ button {
     .prob-container {
         height: 882px;
     }
+
     .data-container {
         width: 100%;
         flex-direction: column;
         align-items: center;
     }
-    
+
     label {
         max-width: 75%;
         width: 75%;
     }
 }
 
-@media only screen and (max-width: 357px){
-    
-    header{
+@media only screen and (max-width: 357px) {
+
+    header {
         width: 97%;
         margin-right: auto;
         margin-left: auto;
