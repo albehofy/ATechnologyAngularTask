@@ -1,0 +1,71 @@
+<div class="data-holder">
+    <!-- for adding background -->
+    <div class="data-wrapper">
+        <div class="data-content">
+            <p class="partial-address">
+                <!-- celebrate icon -->
+                <img src="/assets/images/celebrate.svg" alt="">
+                <span>تهيئة الحملات الإعلانية</span>
+            </p>
+
+            <h2 class="welcom-address">مرحبًا بك في منصة أختيار عقارات سكنية للتعمير</h2>
+
+            <p class="welcom-title">
+                قم بإضافة عملائك الحاليين إلي نظامك الجديد لتبدأ التجربة""قم بإضافة عملائك الحاليين إلي نظامك الجديد
+                لتبدأ التجربة"
+            </p>
+            <ul>
+                
+                <li> 
+                    <img src="/assets/images/done.svg" alt=""> 
+                    قم بتحميل شعارك وتفاصيل علامتك التجارية</li>
+                <li> 
+                    <img src="/assets/images/done.svg" alt=""> 
+                    اختر وخصص الحقول التي تحتاجها</li>
+                <li> 
+                    <img src="/assets/images/done.svg" alt=""> 
+                    اختر موضوعاً وصمم مظهر استمارتك</li>
+                <li> 
+                    <img src="/assets/images/done.svg" alt=""> 
+                    ضبط رسالة شكر وإجراءات المتابعة</li>
+            </ul>
+        </div>
+    </div>
+    <div class="selection">
+
+        <span class="icon btn-close "><svg  width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="arrow"><path _ngcontent-ng-c2677250908="" d="M3.70524 4.77939L0.855999 1.93114C0.496746 1.57201 0.496746 0.977594 0.855999 0.618467C1.21525 0.259339 1.80988 0.259339 2.16913 0.618467L5.01838 3.46672L7.86762 0.618467C8.22688 0.259339 8.8215 0.259339 9.18076 0.618467C9.54001 0.977594 9.54001 1.57201 9.18076 1.93114L6.33151 4.77939L9.18076 7.62764C9.54001 7.98677 9.54001 8.58119 9.18076 8.94032C8.99494 9.12607 8.75956 9.21276 8.52419 9.21276C8.28882 9.21276 8.05345 9.12607 7.86762 8.94032L5.01838 6.09206L2.16913 8.94032C1.98331 9.12607 1.74794 9.21276 1.51256 9.21276C1.27719 9.21276 1.04182 9.12607 0.855999 8.94032C0.496746 8.58119 0.496746 7.98677 0.855999 7.62764L3.70524 4.77939Z" fill="#84929E"></path></svg></span>
+
+        <div class="selection-container">
+            <h2 class="selection-address">طريقة بناء الحملة الخاصة بك</h2>
+            <p class="selection-title">الطريقة المختارة لطريقة إنشاء رسالة الحملة</p>
+            <label for="choise1" class="selection-label">
+                <img src="/assets/images/pen.svg" alt="" class="label-icon">
+                <div class="custom-radio-containers">
+                    <input type="radio" [(ngModel)]="choise" value="choise1" name="choise" id="choise1">
+                    <span class="checkmark"></span>
+                </div>
+                <p>اختيار يدوي</p> 
+                <p class="label-title">قم بإنشاء رسالة طلب سكنك بشكل يدوي ودقيق. اختر كلماتك بعناية، </p>
+            </label>
+            <label for="choise2" class="selection-label">
+                <img src="/assets/images/ai.svg" alt="" class="label-icon">
+                <div class="custom-radio-containers">
+                    <input type="radio" [(ngModel)]="choise" value="choise2" name="choise" id="choise2">
+                    <span class="checkmark"></span>
+                </div>
+                <p>اختيار عن طريق الذكاء الأصطناعي</p>
+                <p class="label-title">قم بإنشاء رسالة طلب سكنك بشكل يدوي ودقيق. اختر كلماتك بعناية، </p>
+            </label>
+            <div class="seprator"></div>
+            <div [ngClass]="{'hidden':choise=='' ? true : false}">
+                <h2 class="project-name">قم بتسمية مشروع أختيار</h2>
+                <p class="project-title">أسم مشروعك يجب ان يكون مميز وواضح</p>
+                <div class="card flex justify-content-center">
+                    <input type="text" class="project-input-name" pInputText [(ngModel)]="projectName" />
+                </div>
+            </div>
+            <button class="btn-start" [disabled]="choise == '' ? true: false" (click)="goToNextLevel()">أبدأ الأن</button>
+        </div>
+    </div>
+
+</div>

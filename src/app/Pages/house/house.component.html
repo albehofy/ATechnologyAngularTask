@@ -1,0 +1,21 @@
+<div class="container">
+    <!-- toggling components with a data comming from child containing Proccess and Level-->
+    @switch (houseData.process) {
+        <!-- first Step -->
+        @case ('start') {
+            <app-pre-step (howToChoiseHouse)="getingHouseData($event)"></app-pre-step>
+            <!-- prob component "Second step" -->
+        }@case ('level2') {
+            <app-prob (howToChoiseHouse)="getingHouseData($event)"></app-prob>
+            <!-- Selection component "Third step" -->
+        }
+        @case ('level3') {
+            <app-selection (howToChoiseHouse)="getingHouseData($event)"/> 
+        }
+        <!-- Submition component "Fourth step" -->
+        @case ('level4') {
+            <app-submission (houseData)="finshingProccess($event)"/>
+        }
+    }
+<div class="fixed-progress-bar" [ngStyle]="{'width':houseData.progress}"></div>
+</div> 

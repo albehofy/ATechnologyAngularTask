@@ -1,0 +1,35 @@
+@defer (when progress > 100) {
+<div class="submition">
+    <div class="bg-wrapper"></div>
+    <div class="submition-data">
+        <div class="submit-container">
+            <h2>تم إرسال رسالتك بنجاح</h2>
+            <p>الرجاء الأنتظار بعض الدقائق فقط</p>
+            <div class="done" #completeImage>
+                <img src="/assets/images/compelete.gif" alt="">
+            </div>
+            <a href="#" class="logout" (click)="logout()">خروج</a>
+        </div>
+    </div>
+</div>
+}@placeholder (){
+<div class="submition">
+    <div class="bg-wrapper"></div>
+    <div class="submition-data">
+        <div class="submit-container">
+            <h2>جاري إرسال رسالتك الأسكانية</h2>
+            <p>الرجاء الأنتظار بعض الدقائق فقط</p>
+            <div class="border">
+                <img src="/assets/images/send.gif" alt="">
+            </div>
+            <div class="progress">
+                <div class="progress-proccess">
+                    <span>جاري الأرسال</span>
+                    <span>{{progress}}/100</span>
+                </div>
+                <progress [value]="progress" max="100"></progress>
+            </div>
+        </div>
+    </div>
+</div>
+}
